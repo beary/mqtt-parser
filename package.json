@@ -1,0 +1,25 @@
+{
+  "name": "mqtt-parser",
+  "version": "0.0.1",
+  "description": "Mqtt packet parser",
+  "main": "out/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beary/mqtt-parser.git"
+  },
+  "author": "beary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beary/mqtt-parser/issues"
+  },
+  "homepage": "https://github.com/beary/mqtt-parser#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.46",
+    "typescript": "^2.5.3"
+  }
+}
