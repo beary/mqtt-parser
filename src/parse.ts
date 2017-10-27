@@ -1,6 +1,8 @@
 import { getLen } from './util'
 import { PacketType } from './packet'
-import { Packet, connect } from './packet'
+import { Packet, Parse } from './packet'
+
+// Parse.connect
 
 export interface OldPacket {
   packetType: number
@@ -23,7 +25,7 @@ export interface OldPacket {
   clientID?: string
 }
 
-const buildPacket = (buffer: Buffer, remainLength: number, bytesNum: number): OldPacket => {
+const buildPacket = (buffer: Buffer, remainLength: number, bytesNum: number) => {
   const remain = buffer.slice(1 + bytesNum)
   const packet = {
     packetType: buffer[0] >> 4 & 0x0F,
@@ -33,10 +35,10 @@ const buildPacket = (buffer: Buffer, remainLength: number, bytesNum: number): Ol
   }
   switch (packet.packetType) {
     case PacketType.CONNECT:
-      connect(remain, packet as any)
-      break
+      return Parse.connect(remain, packet as Packet.Connect)
+    // break
   }
-  return packet
+  // return packet
 }
 
 

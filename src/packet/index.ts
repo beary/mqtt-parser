@@ -1,4 +1,5 @@
-export { parse as connect } from './connect'
+import { parse as connect } from './connect'
+import { parse as connack } from './connack'
 
 export const enum PacketType {
   CONNECT = 1,
@@ -38,5 +39,18 @@ export namespace Packet {
     }
     keepAlive?: number
     clientId?: string
+    willTopic?: string
+    willMessage?: string
+    username?: string
+    password?: string
   }
+  export interface Connack extends BasePacket {
+    connackAcknowledgeFlags: number
+    connectReturnCode: number
+  }
+}
+
+export const Parse = {
+  connect,
+  connack
 }
