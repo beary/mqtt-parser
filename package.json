@@ -5,8 +5,8 @@
   "main": "out/index.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "npm run build && mocha"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/beary/mqtt-parser#readme",
   "devDependencies": {
-    "@types/node": "^8.0.47",
-    "typescript": "^2.5.3"
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.0.53",
+    "mocha": "^4.0.1",
+    "typescript": "^2.6.1"
   }
 }

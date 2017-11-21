@@ -15,7 +15,11 @@ export const parse = (remain: Buffer, packet: Packet.Connack) => {
   if (packet.connackAcknowledgeFlags > 1)
     throw new Error('"Connect Acknowledge Flags" Bits 7-1 are reserved and MUST be set to 0.')
 
-  packet.connectReturnCode = packet[index]
+  packet.connectReturnCode = packet[index++]
   if (packet.connectReturnCode > 5)
-    throw new Error('Reserved connect return code')
+    throw new Error('Reserved connect return code.')
+
+  if (remain.length > index)
+    throw new Error('The CONNACK Packet has no payload.')
+  return packet
 }
