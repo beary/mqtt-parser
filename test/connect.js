@@ -23,8 +23,6 @@ describe('连接报文', () => {
     ])
 
     for (const b of parse(buf)) {
-      console.log(b)
-      delete b.buffer
       assert.equal(b.password, 'p4$$w0£d')
     }
   })
