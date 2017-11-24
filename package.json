@@ -1,6 +1,6 @@
 {
   "name": "mqtt-parser",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Mqtt packet parser",
   "main": "out/index.js",
   "types": "types/index.d.ts",
