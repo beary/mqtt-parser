@@ -1,6 +1,6 @@
-import { Packet } from '.'
+import { Packet } from '../packet'
 
-export const parse = (remain: Buffer, packet: Packet.SubAck) => {
+export default (remain: Buffer, packet: Packet.SubAck) => {
   let index = 0
   packet.packetId = remain.readUInt16BE(index)
   index += 2

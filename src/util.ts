@@ -1,4 +1,4 @@
-export const getLen = (buffer: Buffer) => {
+export const MQTTLength = (buffer: Buffer) => {
   let i = 0
   let value = 0
   for (const b of buffer.slice(1, 5)) {

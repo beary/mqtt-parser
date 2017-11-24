@@ -1,4 +1,4 @@
-import { Packet } from '.'
+import { Packet } from '../packet'
 
 export const enum Code {
   ACCEPTED,
@@ -9,7 +9,7 @@ export const enum Code {
   NOT_AUTHORIZED
 }
 
-export const parse = (remain: Buffer, packet: Packet.ConnAck) => {
+export default (remain: Buffer, packet: Packet.ConnAck) => {
   let index = 0
   packet.connackAcknowledgeFlags = remain[index++]
   if (packet.connackAcknowledgeFlags > 1)

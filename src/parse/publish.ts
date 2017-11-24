@@ -1,6 +1,6 @@
-import { Packet } from '.'
+import { Packet } from '../packet'
 
-export const parse = (remain: Buffer, packet: Packet.Publish) => {
+export default (remain: Buffer, packet: Packet.Publish) => {
   packet.flagOpt = {
     DUP: packet.flags >> 3 & 1,
     QoS: packet.flags >> 1 & 3,

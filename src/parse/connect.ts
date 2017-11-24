@@ -1,6 +1,6 @@
-import { Packet } from '.'
+import { Packet } from '../packet'
 
-export const parse = (remain: Buffer, packet: Packet.Connect) => {
+export default (remain: Buffer, packet: Packet.Connect) => {
   let index = 0
 
   // parse header

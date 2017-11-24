@@ -1,14 +1,3 @@
-import { parse as connect } from './connect'
-import { parse as connack } from './connAck'
-import { parse as publish } from './publish'
-import { parse as pubAck } from './pubAck'
-import { parse as pubRec } from './pubRec'
-import { parse as pubComp } from './pubComp'
-import { parse as subscribe } from './subscribe'
-import { parse as subAck } from './subAck'
-import { parse as unsubscribe } from './unsubscribe'
-import { parse as unsubAck } from './unsubAck'
-
 export const enum PacketType {
   CONNECT = 1,
   CONNACK,
@@ -99,17 +88,4 @@ export namespace Packet {
   export interface PingReq extends BasePacket { }
   export interface PingResp extends BasePacket { }
   export interface Disconnect extends BasePacket { }
-}
-
-export const Parse = {
-  connect,
-  connack,
-  publish,
-  pubAck,
-  pubRec,
-  pubComp,
-  subscribe,
-  subAck,
-  unsubscribe,
-  unsubAck
 }
