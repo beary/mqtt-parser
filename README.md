@@ -1,8 +1,10 @@
 # MQTT-parser
 Split and parse MQTT packet from buffer.
-> MQTT protocol document:
-EN: http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html
-ZH: https://mcxiaoke.gitbooks.io/mqtt-cn/content/
+> MQTT protocol document
+>
+> EN: http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html
+>
+> ZH: https://mcxiaoke.gitbooks.io/mqtt-cn/content/
 
 ---
 ## Usage
